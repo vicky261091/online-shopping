@@ -10,13 +10,20 @@
     	$('#about').addClass('active');
     	break; 
     	
-    	case 'listproducts':
-    	$('#listproducts').addClass('active');
-    	break;
-    	
     	case 'Contact':
         	$('#contact').addClass('active');
            break;
+           
+    	case 'Allproducts':
+        	$('#listProducts').addClass('active');
+           break;
+           
+    	default:
+        	$('#listProducts').addClass('active');
+        	$('#a_'+menu).addClass('active');
+           break;
     
     	}
+    	
+    	
     	});

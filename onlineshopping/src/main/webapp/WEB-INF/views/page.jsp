@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ <%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
         <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
     
     <c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
@@ -41,23 +41,27 @@
   <body>
 <div class="wrapper">
     <!-- Navigation -->
-<jsp:include page="/WEB-INF/shared/navbar.jsp"></jsp:include>
+<%@include file="/WEB-INF/shared/navbar.jsp"%>
     <!-- Page Content -->
     <div class="content">
     <c:if test="${userClickHome==true}">
-<jsp:include page="/WEB-INF/views/home.jsp"></jsp:include>
+<%@include file="/WEB-INF/views/home.jsp"%>
     </c:if>
      <c:if test="${userClickAbout==true}">
-<jsp:include page="/WEB-INF/views/about.jsp"></jsp:include>
+<%@include file="/WEB-INF/views/about.jsp"%>
     </c:if>
     <c:if test="${userClickContact==true}">
-<jsp:include page="/WEB-INF/views/contact.jsp"></jsp:include>
+<%@include file="/WEB-INF/views/contact.jsp"%>
+    </c:if>
+        
+    <c:if test="${userClickAllProducts==true or userClickCategoryProducts==true}">
+<%@include file="/WEB-INF/views/listproducts.jsp"%>
     </c:if>
     <!-- /.container -->
 </div>
 
     <!-- Footer -->
-<jsp:include page="/WEB-INF/shared/footer.jsp"></jsp:include>
+<%@include file="../shared/footer.jsp"%>
     
 
     <!-- Bootstrap core JavaScript -->
