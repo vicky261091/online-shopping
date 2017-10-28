@@ -43,30 +43,30 @@ public class PageController {
 		return mv;
 	}
 	
-	@RequestMapping(value = { "/show/category/{id}/products"})
-	public ModelAndView showCategoryProducts(@PathVariable("id") int id) {
+	@RequestMapping(value = { "/show/category/{id}/Menu"})
+	public ModelAndView showCategoryMenu(@PathVariable("id") int id) {
 		ModelAndView mv = new ModelAndView("page");
 		Category category=null;
-		category=categoryDAO.getId(id);
+		category=categoryDAO.get(id);
 		mv.addObject("title",category.getName());
 
 		mv.addObject("category",category);
 	      mv.addObject("categories",categoryDAO.list());
 
-		mv.addObject("userClickCategoryProducts",true);
+		mv.addObject("userClickCategoryMenu",true);
 		return mv;
 	}
-	@RequestMapping(value = {"/show/all/products"})
-	public ModelAndView showAllProducts() {
+	@RequestMapping(value = {"/show/all/Menu"})
+	public ModelAndView showAllMenu() {
 		ModelAndView mv = new ModelAndView("page");
 
 
-		mv.addObject("title","Allproducts");
+		mv.addObject("title","Menu");
 		
 	      mv.addObject("categories",categoryDAO.list());
 
 		
-		mv.addObject("userClickAllProducts",true);
+		mv.addObject("userClickAllmenu",true);
 		return mv;
 	}
 	

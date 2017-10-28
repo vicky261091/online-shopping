@@ -3,13 +3,13 @@
 
 <html>
 <body>
-	<h2> Sport Mart </h2>
-	<h7>A place for all sport accessories</h7>
+	<h2> Vicky's Food </h2>
+	<h7>A place for all India Food</h7>
 
 <div class="list-group">
 		
 			<c:forEach var="category" items="${categories}">
-				<a href="${contextRoot}/show/category/${category.id}/products" class="list-group-item" id="a_${category.name}">${category.name}</a>
+				<a href="${contextRoot}/show/category/${category.id}/Menu" class="list-group-item" id="a_${category.name}">${category.name}</a>
 			</c:forEach>
 		
 </div>

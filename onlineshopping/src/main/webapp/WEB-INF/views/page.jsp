@@ -22,6 +22,7 @@
     <script>
 
     window.menu='${title}';
+    window.contextRoot='${contextRoot}'
    
     
     </script>
@@ -54,7 +55,7 @@
 <%@include file="/WEB-INF/views/contact.jsp"%>
     </c:if>
         
-    <c:if test="${userClickAllProducts==true or userClickCategoryProducts==true}">
+    <c:if test="${userClickAllmenu==true or userClickCategoryMenu==true}">
 <%@include file="/WEB-INF/views/listproducts.jsp"%>
     </c:if>
     <!-- /.container -->
@@ -68,7 +69,11 @@
     <script src="${js}/jquery.js"></script>
     <script src="${js}/popper.min.js"></script>
     <script src="${js}/bootstrap.min.js"></script>
+     <script src="${js}/jquery.dataTables.js"></script>
+    
     <script src="${js}/myapp.js"></script>
+    
+   
     </div>
     
   </body>
